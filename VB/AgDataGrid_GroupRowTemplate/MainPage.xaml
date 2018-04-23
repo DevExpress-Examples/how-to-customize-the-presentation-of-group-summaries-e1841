@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="AgDataGrid_GroupRowTemplate.MainPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:grid="clr-namespace:DevExpress.AgDataGrid;assembly=DevExpress.AgDataGrid.v10.1" xmlns:editors="clr-namespace:DevExpress.Xpf.Editors.Settings;assembly=DevExpress.Xpf.Core.v10.1" mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+  <Grid x:Name="RootVisual" Width="700" Height="400">
+        <grid:AgDataGrid x:Name="grid" ShowGroupPanel="True">
+            <grid:AgDataGrid.GroupSummaryTemplate>
+                <DataTemplate>
+                    <grid:AgDataGrid DataSource="{Binding}">
+                    </grid:AgDataGrid>
+                </DataTemplate>
+            </grid:AgDataGrid.GroupSummaryTemplate>
+            <grid:AgDataGrid.Columns>
+                <grid:AgDataGridColumn FieldName="CompanyName" GroupIndex="0" HorizontalContentAlignment="Left" />
+                <grid:AgDataGridColumn FieldName="UnitPrice">
+                    <grid:AgDataGridColumn.EditSettings>
+                        <editors:TextEditSettings DisplayFormat="c2" />
+                    </grid:AgDataGridColumn.EditSettings>
+                </grid:AgDataGridColumn>
+                <grid:AgDataGridColumn FieldName="Quantity" />
+            </grid:AgDataGrid.Columns>
+            <grid:AgDataGrid.GroupSummary>
+                <grid:AgDataGridSummaryItem SummaryType="Max" FieldName="UnitPrice" DisplayFormat="c2" />
+                <grid:AgDataGridSummaryItem SummaryType="Sum" FieldName="Quantity" />
+            </grid:AgDataGrid.GroupSummary>
+        </grid:AgDataGrid>
+    </Grid>
+</UserControl>
