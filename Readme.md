@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainPage.xaml](./CS/AgDataGrid_GroupRowTemplate/MainPage.xaml) (VB: [MainPage.xaml](./VB/AgDataGrid_GroupRowTemplate/MainPage.xaml))
+* [MainPage.xaml.cs](./CS/AgDataGrid_GroupRowTemplate/MainPage.xaml.cs) (VB: [MainPage.xaml](./VB/AgDataGrid_GroupRowTemplate/MainPage.xaml))
+<!-- default file list end -->
 # How to Customize the Presentation of Group Summaries
 
 
